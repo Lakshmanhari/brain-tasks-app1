@@ -22,4 +22,4 @@ phases:
       - echo Tag image
       - docker tag $ECR_REPO:$IMAGE_TAG <YOUR_ACCOUNT_ID>.dkr.ecr.ap-south-1.amazonaws.com/$ECR_REPO:$IMAGE_TAG
       - echo Push image
-      - docker push <YOUR_ACCOUNT_ID>.dkr.ecr.ap-south-1.amazonaws.com/$ECR_REPO:$IMAGE_TAG
+      - docker push 554903865969.dkr.ecr.ap-south-1.amazonaws.com/$ECR_REPO:$IMAGE_TAG
