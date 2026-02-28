@@ -10,7 +10,7 @@ phases:
   pre_build:
     commands:
       - echo Logging in to ECR
-      - aws ecr get-login-password --region $AWS_REGION | docker login --username AWS --password-stdin <YOUR_ACCOUNT_ID>.dkr.ecr.ap-south-1.amazonaws.com
+      - aws ecr get-login-password --region $AWS_REGION | docker login --username AWS --password-stdin 554903865969.dkr.ecr.ap-south-1.amazonaws.com
 
   build:
     commands:
@@ -20,6 +20,6 @@ phases:
   post_build:
     commands:
       - echo Tag image
-      - docker tag $ECR_REPO:$IMAGE_TAG <YOUR_ACCOUNT_ID>.dkr.ecr.ap-south-1.amazonaws.com/$ECR_REPO:$IMAGE_TAG
+      - docker tag $ECR_REPO:$IMAGE_TAG 554903865969.dkr.ecr.ap-south-1.amazonaws.com/$ECR_REPO:$IMAGE_TAG
       - echo Push image
       - docker push 554903865969.dkr.ecr.ap-south-1.amazonaws.com/$ECR_REPO:$IMAGE_TAG
